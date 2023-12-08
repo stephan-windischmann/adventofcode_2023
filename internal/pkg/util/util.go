@@ -32,6 +32,16 @@ func SumInt(in []int) int {
 	return sum
 }
 
+func ProdInt(in []int) int {
+	sum := in[0]
+
+	for i := 1; i < len(in); i++ {
+		sum *= in[i]
+	}
+
+	return sum
+}
+
 func CreateRuneTable(input []string) [][]rune {
 	t := make([][]rune, 0, len(input))
 
