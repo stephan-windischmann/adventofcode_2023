@@ -55,3 +55,35 @@ func CreateRuneTable(input []string) [][]rune {
 func RuneToInt(c rune) int {
 	return int(c - '0')
 }
+
+func CountChars(s string) map[rune]int {
+	m := make(map[rune]int)
+
+	for _, c := range s {
+		m[c]++
+	}
+
+	return m
+}
+
+func CountCharsExclude(s string, exclude rune) map[rune]int {
+	m := make(map[rune]int)
+
+	for _, c := range s {
+		if c == exclude {
+			continue
+		}
+		m[c]++
+	}
+
+	return m
+}
+
+func IndexByte(needle byte, l []byte) int {
+	for i, b := range l {
+		if b == needle {
+			return i
+		}
+	}
+	return -1
+}
