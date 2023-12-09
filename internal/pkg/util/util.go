@@ -3,6 +3,8 @@ package util
 import (
 	"bufio"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func LoadInput(fileName string) []string {
@@ -86,4 +88,27 @@ func IndexByte(needle byte, l []byte) int {
 		}
 	}
 	return -1
+}
+
+func StringToIntSlice(in string) []int {
+	nums := make([]int, 0)
+
+	for _, n := range strings.Fields(in) {
+		num, err := strconv.Atoi(n)
+		if err != nil {
+			panic(err)
+		}
+		nums = append(nums, num)
+	}
+
+	return nums
+}
+
+func AllEquals(in []int, eq int) bool {
+	for _, n := range in {
+		if n != eq {
+			return false
+		}
+	}
+	return true
 }
