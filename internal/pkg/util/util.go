@@ -112,3 +112,17 @@ func AllEquals(in []int, eq int) bool {
 	}
 	return true
 }
+
+func ToRune(input []string) [][]rune {
+	runes := make([][]rune, len(input))
+
+	for i := 0; i < len(input); i++ {
+		l := make([]rune, len(input[i]))
+		for j := 0; j < len(input[i]); j++ {
+			l[j] = rune(input[i][j])
+		}
+		runes[i] = l
+	}
+
+	return runes
+}
