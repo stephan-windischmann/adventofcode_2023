@@ -126,3 +126,13 @@ func ToRune(input []string) [][]rune {
 
 	return runes
 }
+
+func JoinIntList(input []int, sep string) string {
+	sList := make([]string, len(input))
+
+	for i, n := range input {
+		sList[i] = strconv.Itoa(n)
+	}
+
+	return strings.Join(sList, sep)
+}
