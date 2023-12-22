@@ -167,6 +167,9 @@ func solveDay15() {
 
 	r1 := day15.SolvePart1(input)
 	fmt.Println("Day 15 Part 1 solution: ", r1)
+
+	r2 := day15.SolvePart2(input)
+	fmt.Println("Day 15 Part 2 solution: ", r2)
 }
 
 func main() {

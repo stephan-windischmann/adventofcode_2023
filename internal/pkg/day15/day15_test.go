@@ -13,3 +13,11 @@ func TestSolvePart1(t *testing.T) {
 
 	assert.Equal(t, 1320, r)
 }
+
+func TestSolvePart2(t *testing.T) {
+	input := util.LoadInput("../../../input/day15/input_test")
+
+	r := SolvePart2(input)
+
+	assert.Equal(t, 145, r)
+}
