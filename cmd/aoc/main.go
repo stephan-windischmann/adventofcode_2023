@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/stephan-windischmann/adventofcode_2023/internal/pkg/day18"
 	"os"
 
 	"github.com/stephan-windischmann/adventofcode_2023/internal/pkg/day13"
@@ -195,6 +196,16 @@ func solveDay17() {
 	fmt.Println("Day 17 Part 2 solution: ", r2)
 }
 
+func solveDay18() {
+	input := util.LoadInput("../../input/day18/input")
+
+	r1 := day18.SolvePart1(input)
+	fmt.Println("Day 18 Part 1 solution: ", r1)
+
+	r2 := day18.SolvePart2(input)
+	fmt.Println("Day 18 Part 2 solution: ", r2)
+}
+
 func main() {
 	switch os.Args[1] {
 	case "1":
@@ -231,5 +242,7 @@ func main() {
 		solveDay16()
 	case "17":
 		solveDay17()
+	case "18":
+		solveDay18()
 	}
 }
