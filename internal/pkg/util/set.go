@@ -35,6 +35,17 @@ func (s *Set) Clear() {
 	clear(s.set)
 }
 
+func (s *Set) GetAll() []interface{} {
+	allItems := make([]interface{}, len(s.set))
+
+	i := 0
+	for k := range s.set {
+		allItems[i] = k
+		i++
+	}
+	return allItems
+}
+
 func NewSet() *Set {
 	return &Set{
 		set: make(map[interface{}]struct{}),
